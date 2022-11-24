@@ -1,12 +1,12 @@
 import "./style.css"
 
-const Header = (props) => {
+const Header = ({title}) => (
     <header
         className="header"
     >
-        Czinkciarz.peel
+        {title}
     </header>
 
-};
+);
 
 export default Header;

@@ -10,7 +10,8 @@ function App() {
   
   return (
     <div>
-      <Header />
+      <Header 
+      title="Czinkciarz.peel" />
       <Form>
         <Amount />
         <Currency />
