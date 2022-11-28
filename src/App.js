@@ -5,13 +5,14 @@ import Currency from "./Currency";
 import Result from "./Result";
 import Footer from "./Footer";
 import Form from "./Form";
+import Container from "./Container";
 
 function App() {
-  
+
   return (
-    <div>
-      <Header 
-      title="Czinkciarz.peel" />
+    <Container>
+      <Header
+        title="Czinkciarz.peel" />
       <Form>
         <Amount />
         <Currency />
@@ -19,7 +20,7 @@ function App() {
         <Buttons />
         <Footer />
       </Form>
-    </div>
+    </Container>
   );
 }
 
