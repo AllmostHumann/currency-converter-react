@@ -1,12 +1,16 @@
 import "./style.css";
 
 const Form = () => (
-  <fieldset className="form__fieldset">
+  <fieldset
+    className="form__fieldset">
     <legend
-      className="form__legend">
+      className="form__legend"
+    >
       Currency conventer
     </legend>
-    <section className="form__label">
+    <section
+      className="form__label"
+    >
       <label>
         Wpisz kwotę w PLN:
         <input
@@ -14,28 +18,56 @@ const Form = () => (
           type="number"
           min="0.01"
           required step="0.01"
-          placeholder="Pole wymagane" />
+          placeholder="Pole wymagane"
+        />
       </label>
     </section>
-    <section className="form__label">
+    <section
+      className="form__label">
       <label>
         Wybierz walutę:
-        <select className="form__currencyValue" name="currency" id="select">
-          <option value="EUR">Euro (EUR)</option>
-          <option value="USD">Dolar amerykański (USD)</option>
-          <option value="NOK">Korona norweska (NOK)</option>
+        <select
+          className="form__currencyValue" name="currency" id="select">
+          <option
+            value="EUR"
+          >
+            Euro (EUR)
+          </option>
+          <option
+            value="USD"
+          >Dolar amerykański (USD)
+          </option>
+          <option
+            value="NOK"
+          >Korona norweska (NOK)
+          </option>
         </select>
       </label>
     </section>
-    <section className="form__label">
+    <section
+      className="form__label">
       <label>
         Otrzymasz:
-        <strong className="form__resultValue">N/A</strong>
+        <strong
+          className="form__resultValue"
+        >
+          N/A
+        </strong>
       </label>
     </section>
     <div>
-      <button className="form__Button" type="submit">Przelicz</button>
-      <button className="form__Button" type="reset">Reset</button>
+      <button
+        className="form__Button"
+        type="submit"
+      >
+        Przelicz
+      </button>
+      <button
+        className="form__Button"
+        type="reset"
+      >
+        Reset
+      </button>
     </div>
     <section>
       <p>*Kursy walut pobrane z Narodowego Banku Polskiego.<br />
