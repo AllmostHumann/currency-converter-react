@@ -1,12 +1,11 @@
 import "./style.css"
 
 const Result = ({ result }) => (
-    <section
-        className="form__label">
-        <label>
+    <section className="result__section">
+        <label className="result__label">
             Otrzymasz:
             <strong
-                className="form__resultValue"
+                className="result__resultValue"
             >
                 {result}
             </strong>

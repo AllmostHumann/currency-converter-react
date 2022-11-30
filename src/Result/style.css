@@ -1,10 +1,22 @@
-.form__label {
+.result__section {
     font-weight: 700;
     margin: 5px;
-    padding: 5px;
-
+    padding: 5px; 
 }
 
-.form__resultValue {
-    margin: auto 10px;
+@media (max-width: 767px) {
+    .result__label {
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+}
+
+.result__resultValue {
+    margin: 5px 10px;
+}
+
+@media (max-width: 767px) {
+    .result__resultValue {
+        margin: 5px 0px;
+    }
 }
