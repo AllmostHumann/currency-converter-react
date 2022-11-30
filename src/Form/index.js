@@ -6,6 +6,7 @@ import Buttons from "../Buttons";
 import Result from "../Result";
 import Select from "../Select";
 import Input from "../Input";
+import Legend from "../Legend";
 
 const Form = ({ result, calculatedResult, getResult }) => {
 
@@ -30,14 +31,10 @@ const Form = ({ result, calculatedResult, getResult }) => {
       <fieldset
         className="form__fieldset"
       >
-        <legend
-          className="form__legend"
-        >
-          Currency conventer
-        </legend>
-        <Input 
-        exchangeAmount={exchangeAmount}
-        setExchangeAmount={setExchangeAmount}
+        <Legend />
+        <Input
+          exchangeAmount={exchangeAmount}
+          setExchangeAmount={setExchangeAmount}
         />
         <Select
           currency={currency}
