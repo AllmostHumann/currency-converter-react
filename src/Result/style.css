@@ -11,12 +11,12 @@
     }
 }
 
-.result__resultValue {
+.result__value {
     margin: 5px 10px;
 }
 
 @media (max-width: 767px) {
-    .result__resultValue {
+    .result__value {
         margin: 5px 0px;
     }
 }

@@ -1,5 +1,3 @@
-import "./style.css";
-
 const Info = () => (
     <section>
         <p>*Kursy walut pobrane z Narodowego Banku Polskiego.<br />

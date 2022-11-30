@@ -5,13 +5,13 @@ const Buttons = () => (
   <React.Fragment>
     <div>
       <button
-        className="form__Button"
+        className="buttons__button"
         type="submit"
       >
         Przelicz
       </button>
       <button
-        className="form__Button"
+        className="buttons__button"
         type="reset"
       >
         Reset

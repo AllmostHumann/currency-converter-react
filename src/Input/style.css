@@ -1,4 +1,4 @@
-.form__label {
+.input__label {
     font-weight: 700;
     margin: 5px;
     padding: 5px;
@@ -6,18 +6,18 @@
 }
 
 @media (max-width: 767px) {
-    .form__label {
+    .input__label {
         display: grid;
         grid-template-columns: min-content ;
     }
 }
 
-.form__amountValue {
+.input__amountValue {
     margin: 5px 5px;
 }
 
 @media (max-width: 767px) {
-    .form__amountValue {
+    .input__amountValue {
         margin: 5px 0px;
     }
 }

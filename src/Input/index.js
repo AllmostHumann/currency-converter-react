@@ -4,10 +4,10 @@ const Input = ({ exchangeAmount, setExchangeAmount }) => {
 
     return (
         <section>
-            <label className="form__label">
+            <label className="input__label">
                 Wpisz kwotę w PLN:
                 <input
-                    className="form__amountValue"
+                    className="input__amountValue"
                     type="number"
                     min="0.01"
                     required step="0.01"

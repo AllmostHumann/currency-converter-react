@@ -2,7 +2,7 @@ import "./style.css";
 
 const Legend = () => (
     <legend
-    className="form__legend"
+    className="legend"
   >
     Currency conventer
   </legend>

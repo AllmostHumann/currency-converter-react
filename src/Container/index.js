@@ -1,6 +1,3 @@
-import { Children } from "react";
-import "./style.css"
-
 const Container = ({ children }) => (
     <div>
         {children}

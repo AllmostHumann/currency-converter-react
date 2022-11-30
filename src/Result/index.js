@@ -5,7 +5,7 @@ const Result = ({ result }) => (
         <label className="result__label">
             Otrzymasz:
             <strong
-                className="result__resultValue"
+                className="result__value"
             >
                 {result}
             </strong>
