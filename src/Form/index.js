@@ -1,8 +1,9 @@
 import "./style.css";
 import { currencies } from "../Currency/index";
 import { useState } from "react";
+import Footer from "../Footer";
 
-const Form = ({ result, calculatedResult, getResult }) => {
+const Form = ({ result, calculatedResult, getResult, footer }) => {
 
   const [exchangeAmount, setExchangeAmount] = useState("");
   const [currency, setCurrency] = useState("EUR");
@@ -92,10 +93,7 @@ const Form = ({ result, calculatedResult, getResult }) => {
             Reset
           </button>
         </div>
-        <section>
-          <p>*Kursy walut pobrane z Narodowego Banku Polskiego.<br />
-            Aktualne na dzień: <strong>2022-10-26</strong></p>
-        </section>
+        <Footer />
       </fieldset>
     </form>
   );
