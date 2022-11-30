@@ -1,7 +1,7 @@
 import "./style.css";
 import React, { useState } from "react";
 import { currencies } from "../Currencies/index";
-import Footer from "../Footer";
+import Info from "../Info";
 import Buttons from "../Buttons";
 import Result from "../Result";
 import Select from "../Select";
@@ -57,7 +57,7 @@ const Form = () => {
             result={result}
           />
           <Buttons />
-          <Footer />
+          <Info />
         </fieldset>
       </form>
     
