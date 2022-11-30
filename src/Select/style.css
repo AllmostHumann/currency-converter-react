@@ -1,10 +1,22 @@
-.form__label {
+.select__label {
     font-weight: 700;
     margin: 5px;
     padding: 5px;
-
 }
 
-.form__currencyValue {
-    margin: auto 40px
+@media (max-width: 767px) {
+    .select__label {
+        display: grid;
+        grid-template-columns: min-content ;
+    }
+}
+
+.select__currencyValue {
+    margin: 5px 5px;
+}
+
+@media (max-width: 767px) {
+    .select__currencyValue {
+        margin: 5px 0px;
+    }
 }

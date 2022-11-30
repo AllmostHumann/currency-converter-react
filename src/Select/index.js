@@ -2,12 +2,11 @@ import "./style.css"
 
 
 const Select = ({ currencies, currency, setCurrency }) => (
-  <section
-    className="form__label">
-    <label>
+  <section>
+    <label className="select__label">
       Wybierz walutę:
       <select
-        className="form__currencyValue"
+        className="select__currencyValue"
         name="currency"
         value={currency}
         onChange={({ target }) => setCurrency(target.value)}

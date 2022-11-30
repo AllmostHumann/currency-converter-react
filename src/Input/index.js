@@ -3,10 +3,8 @@ import "./style.css";
 const Input = ({ exchangeAmount, setExchangeAmount }) => {
 
     return (
-        <section
-            className="form__label"
-        >
-            <label>
+        <section>
+            <label className="form__label">
                 Wpisz kwotę w PLN:
                 <input
                     className="form__amountValue"

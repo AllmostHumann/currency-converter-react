@@ -2,9 +2,22 @@
     font-weight: 700;
     margin: 5px;
     padding: 5px;
+    
+}
 
+@media (max-width: 767px) {
+    .form__label {
+        display: grid;
+        grid-template-columns: min-content ;
+    }
 }
 
 .form__amountValue {
-    margin: auto 10px
+    margin: 5px 5px;
+}
+
+@media (max-width: 767px) {
+    .form__amountValue {
+        margin: 5px 0px;
+    }
 }
