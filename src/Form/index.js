@@ -2,6 +2,7 @@ import "./style.css";
 import { currencies } from "../Currency/index";
 import { useState } from "react";
 import Footer from "../Footer";
+import Buttons from "../Buttons";
 
 const Form = ({ result, calculatedResult, getResult, footer }) => {
 
@@ -79,20 +80,7 @@ const Form = ({ result, calculatedResult, getResult, footer }) => {
             </strong>
           </label>
         </section>
-        <div>
-          <button
-            className="form__Button"
-            type="submit"
-          >
-            Przelicz
-          </button>
-          <button
-            className="form__Button"
-            type="reset"
-          >
-            Reset
-          </button>
-        </div>
+        <Buttons />
         <Footer />
       </fieldset>
     </form>
