@@ -1,5 +1,5 @@
 import "./style.css";
-import { currencies } from "../Currency/index";
+import { currencies } from "../Currencies/index";
 import { useState } from "react";
 import Footer from "../Footer";
 import Buttons from "../Buttons";
