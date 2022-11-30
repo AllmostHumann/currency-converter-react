@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import Buttons from "../Buttons";
 import Result from "../Result";
 import Select from "../Select";
+import Input from "../Input";
 
 const Form = ({ result, calculatedResult, getResult }) => {
 
@@ -34,26 +35,14 @@ const Form = ({ result, calculatedResult, getResult }) => {
         >
           Currency conventer
         </legend>
-        <section
-          className="form__label"
-        >
-          <label>
-            Wpisz kwotę w PLN:
-            <input
-              className="form__amountValue"
-              type="number"
-              min="0.01"
-              required step="0.01"
-              placeholder="Pole wymagane"
-              value={exchangeAmount}
-              onChange={({ target }) => setExchangeAmount(target.value)}
-            />
-          </label>
-        </section>
+        <Input 
+        exchangeAmount={exchangeAmount}
+        setExchangeAmount={setExchangeAmount}
+        />
         <Select
-        currency={currency}
-        setCurrency={setCurrency}
-        currencies={currencies}
+          currency={currency}
+          setCurrency={setCurrency}
+          currencies={currencies}
         />
         <Result
           result={result}
