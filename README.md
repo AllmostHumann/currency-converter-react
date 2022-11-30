@@ -23,8 +23,8 @@ Simple to do list in React.js, with mobile devices responsiveness.
 - BEM
 - ES6
 - Grid
-- Flex
-- React
+- React.js
+- CSS
 
 
 
