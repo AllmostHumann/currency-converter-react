@@ -1,9 +1,10 @@
 import "./style.css";
-import { currencies } from "../Currencies/index";
 import { useState } from "react";
+import { currencies } from "../Currencies/index";
 import Footer from "../Footer";
 import Buttons from "../Buttons";
 import Result from "../Result";
+import Select from "../Select";
 
 const Form = ({ result, calculatedResult, getResult }) => {
 
@@ -49,27 +50,11 @@ const Form = ({ result, calculatedResult, getResult }) => {
             />
           </label>
         </section>
-        <section
-          className="form__label">
-          <label>
-            Wybierz walutę:
-            <select
-              className="form__currencyValue"
-              name="currency"
-              value={currency}
-              onChange={({ target }) => setCurrency(target.value)}
-            >
-              {currencies.map(currency => (
-                <option
-                  key={currency.id}
-                  value={currency.short}
-                >
-                  {currency.name}
-                </option>
-              ))};
-            </select>
-          </label>
-        </section>
+        <Select
+        currency={currency}
+        setCurrency={setCurrency}
+        currencies={currencies}
+        />
         <Result
           result={result}
         />

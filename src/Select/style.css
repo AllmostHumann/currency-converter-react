@@ -1,0 +1,10 @@
+.form__label {
+    font-weight: 700;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.form__currencyValue {
+    margin: auto 40px
+}
