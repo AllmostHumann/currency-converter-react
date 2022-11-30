@@ -3,8 +3,9 @@ import { currencies } from "../Currency/index";
 import { useState } from "react";
 import Footer from "../Footer";
 import Buttons from "../Buttons";
+import Result from "../Result";
 
-const Form = ({ result, calculatedResult, getResult, footer }) => {
+const Form = ({ result, calculatedResult, getResult }) => {
 
   const [exchangeAmount, setExchangeAmount] = useState("");
   const [currency, setCurrency] = useState("EUR");
@@ -69,17 +70,9 @@ const Form = ({ result, calculatedResult, getResult, footer }) => {
             </select>
           </label>
         </section>
-        <section
-          className="form__label">
-          <label>
-            Otrzymasz:
-            <strong
-              className="form__resultValue"
-            >
-              {result}
-            </strong>
-          </label>
-        </section>
+        <Result
+          result={result}
+        />
         <Buttons />
         <Footer />
       </fieldset>
