@@ -1,6 +1,6 @@
 # Jakub Głuch - Currency conventer in React.js
 
-![To do list Demo](public/gif/currencyDemo.gif)
+![To do list Demo](src/gif/currencyDemo.gif)
 
 
 ## Demo https://allmosthumann.github.io/currency-conventer-react/

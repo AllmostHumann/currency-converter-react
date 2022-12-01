@@ -58,9 +58,7 @@ const Form = () => {
         <Info />
       </fieldset>
     </form>
-
   );
-
 };
 
 

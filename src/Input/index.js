@@ -1,8 +1,7 @@
 import "./style.css";
 
-const Input = ({ exchangeAmount, setExchangeAmount }) => {
+const Input = ({ exchangeAmount, setExchangeAmount }) => (
 
-    return (
         <section>
             <label className="input__label">
                 Wpisz kwotę w PLN:
@@ -17,7 +16,6 @@ const Input = ({ exchangeAmount, setExchangeAmount }) => {
                 />
             </label>
         </section>
-    );
-};
+);
 
 export default Input;
