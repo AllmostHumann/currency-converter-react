@@ -1,6 +1,6 @@
 import "./style.css";
 import React, { useState } from "react";
-import { currencies } from "../Currencies/index";
+import { currencies } from "../Common/currencies";
 import Info from "../Info";
 import Buttons from "../Buttons";
 import Result from "../Result";
