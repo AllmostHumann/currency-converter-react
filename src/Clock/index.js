@@ -5,21 +5,29 @@ const Clock = () => {
 
     const [date, setDate] = useState(new Date());
 
-    const refreshClock = () => {
-        setDate(new Date());
-    }
+    const formatedDate = date.toLocaleString("pl", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+    });
 
     useEffect(() => {
-        const timerId = setInterval(refreshClock, 1000);
+        const setIntervalId = setInterval(() => {
+            setDate(new Date());
+        }, 1000)
         return () => {
-            clearInterval(timerId);
+            clearInterval(setIntervalId);
         };
     }, []);
 
     return (
-        <span className="clock">
-            Dzisiaj jest: {date.toLocaleString("pl", {weekday: "long", day: "numeric", month: "long", year: "numeric"})}, {date.toLocaleTimeString()}
-        </span>
+        <p className="clock">
+            Dzisiaj jest: {formatedDate}
+        </p>
     );
 }
 
