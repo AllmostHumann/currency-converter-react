@@ -17,8 +17,8 @@ const Clock = () => {
     }, []);
 
     return (
-        <span>
-            {date.toLocaleTimeString()}
+        <span className="clock">
+            Dzisiaj jest: {date.toLocaleString("pl", {weekday: "long", day: "numeric", month: "long", year: "numeric"})}, {date.toLocaleTimeString()}
         </span>
     );
 }
