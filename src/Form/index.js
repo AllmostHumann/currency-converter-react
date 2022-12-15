@@ -7,6 +7,7 @@ import Result from "../Result";
 import Select from "../Select";
 import Input from "../Input";
 import Legend from "../Legend";
+import Clock from "../Clock";
 
 const Form = () => {
 
@@ -42,6 +43,7 @@ const Form = () => {
         className="form__fieldset"
       >
         <Legend />
+        <Clock />
         <Input
           exchangeAmount={exchangeAmount}
           setExchangeAmount={setExchangeAmount}
