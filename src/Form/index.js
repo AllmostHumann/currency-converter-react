@@ -10,7 +10,6 @@ import Legend from "../Legend";
 import Clock from "../Clock";
 
 const Form = () => {
-
   const [exchangeAmount, setExchangeAmount] = useState("");
   const [currency, setCurrency] = useState("EUR");
   const [result, getResult] = useState("N/A");
@@ -28,7 +27,6 @@ const Form = () => {
   const calculatedResult = (exchangeAmount, currency) => {
     const exchangeRate = currencies.find(({ short }) => short === currency).rate;
     const short = currencies.find(({ short }) => short === currency).short;
-
     getResult((exchangeAmount / exchangeRate).toFixed(2) + " " + short);
 
   };
