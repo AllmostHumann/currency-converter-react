@@ -2,7 +2,6 @@ import "./style.css";
 import { useState, useEffect } from "react";
 
 const Clock = () => {
-
     const [date, setDate] = useState(new Date());
 
     const formatedDate = date.toLocaleString("pl", {
@@ -16,11 +15,12 @@ const Clock = () => {
     });
 
     useEffect(() => {
-        const setIntervalId = setInterval(() => {
+        const intervalId = setInterval(() => {
             setDate(new Date());
         }, 1000)
+
         return () => {
-            clearInterval(setIntervalId);
+            clearInterval(intervalId);
         };
     }, []);
 
