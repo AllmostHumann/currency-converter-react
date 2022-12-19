@@ -25,9 +25,11 @@ const Clock = () => {
     }, []);
 
     return (
-        <p className="clock">
-            Dzisiaj jest: {formatedDate}
-        </p>
+        <div className="clock">
+            Dzisiaj jest
+            {" "}
+            {formatedDate}
+        </div>
     );
 }
 
