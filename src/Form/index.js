@@ -25,8 +25,9 @@ const Form = () => {
   };
 
   const calculatedResult = (exchangeAmount, currency) => {
-    const exchangeRate = currencies.find(({ short }) => short === currency).rate;
-    const short = currencies.find(({ short }) => short === currency).short;
+    const {rate: exchangeRate} = currencies.find(({ short }) => short === currency);
+    const {short} = currencies.find(({ short }) => short === currency);
+    
     getResult((exchangeAmount / exchangeRate).toFixed(2) + " " + short);
 
   };
