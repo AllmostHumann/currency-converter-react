@@ -1,16 +1,14 @@
-import "./style.css"
+import { SectionLabel, SectionResult, SectionValue } from "./styled";
 
 const Result = ({ result }) => (
-    <section className="result__section">
-        <label className="result__label">
+    <SectionLabel>
+        <SectionResult>
             Otrzymasz:
-            <strong
-                className="result__value"
-            >
+            <SectionValue>
                 {result}
-            </strong>
-        </label>
-    </section>
+            </SectionValue>
+        </SectionResult>
+    </SectionLabel>
 );
 
 export default Result;
