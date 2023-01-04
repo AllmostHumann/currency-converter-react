@@ -1,23 +1,20 @@
-.input__label {
+import styled from "styled-components";
+
+export const Label = styled.label`
     font-weight: 700;
     margin: 5px;
     padding: 5px;
-    
-}
 
-@media (max-width: 767px) {
-    .input__label {
+    @media (max-width: 767px) {
         display: grid;
         grid-template-columns: min-content ;
     }
-}
+`;
 
-.input__amountValue {
-    margin: 5px 5px;
-}
+export const InputField = styled.input`
+margin: 5px 5px;
 
 @media (max-width: 767px) {
-    .input__amountValue {
         margin: 5px 0px;
     }
-}
+`;
