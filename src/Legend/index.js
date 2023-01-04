@@ -1,11 +1,9 @@
-import "./style.css";
+import { Caption } from "./styled";
 
 const Legend = () => (
-    <legend
-    className="legend"
-  >
+  <Caption>
     Currency conventer
-  </legend>
+  </Caption>
 );
 
 export default Legend;
