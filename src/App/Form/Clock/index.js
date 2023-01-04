@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { DigitalClock } from "./styled";
+import {useCurrentDate} from "./useCurrentDate"
 
 const Clock = () => {
     const [date, setDate] = useState(new Date());
+    useCurrentDate(setDate);
 
     const formatedDate = date.toLocaleString("pl", {
         weekday: "long",
@@ -13,16 +15,6 @@ const Clock = () => {
         minute: "2-digit",
         second: "2-digit",
     });
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setDate(new Date());
-        }, 1000)
-
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, []);
 
     return (
         <DigitalClock>
