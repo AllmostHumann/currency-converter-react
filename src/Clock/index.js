@@ -1,5 +1,5 @@
-import "./style.css";
 import { useState, useEffect } from "react";
+import { DigitalClock } from "./styled";
 
 const Clock = () => {
     const [date, setDate] = useState(new Date());
@@ -25,11 +25,11 @@ const Clock = () => {
     }, []);
 
     return (
-        <div className="clock">
+        <DigitalClock>
             Dzisiaj jest
             {" "}
             {formatedDate}
-        </div>
+        </DigitalClock>
     );
 }
 
