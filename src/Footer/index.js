@@ -1,7 +1,7 @@
-import "./style.css";
+import { Copyright } from "./styled";
 
 const Footer = () => (
-    <footer className="footer"> Copyright 2022 Wszelkie prawa zastrzeżone. </footer>
+    <Copyright> Copyright 2022 Wszelkie prawa zastrzeżone. </Copyright>
 );
 
 export default Footer;
