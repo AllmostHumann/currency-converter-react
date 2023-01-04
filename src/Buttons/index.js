@@ -1,21 +1,19 @@
 import React from "react";
-import "./style.css"
+import { Button } from "./styled";
 
 const Buttons = () => (
   <>
     <div>
-      <button
-        className="buttons__button"
+      <Button
         type="submit"
       >
         Przelicz
-      </button>
-      <button
-        className="buttons__button"
+      </Button>
+      <Button
         type="reset"
       >
         Reset
-      </button>
+      </Button>
     </div>
   </>
 )
