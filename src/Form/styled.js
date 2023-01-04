@@ -1,4 +1,6 @@
-.form__fieldset {
+import styled from "styled-components";
+
+export const Fieldset = styled.fieldset`
     display: block;
     max-width: 600px;
     margin: 10px auto;
@@ -7,10 +9,4 @@
     background-color: white;
     position: relative;
     box-shadow: 5px -5px 24px 0px rgba(127, 82, 0, 0.30);
-}
-
-
-
-
-
-
+`;

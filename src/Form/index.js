@@ -1,4 +1,3 @@
-import "./style.css";
 import { useState } from "react";
 import { currencies } from "../common/currencies";
 import Info from "../Info";
@@ -8,6 +7,7 @@ import Select from "../Select";
 import Input from "../Input";
 import Legend from "../Legend";
 import Clock from "../Clock";
+import { Fieldset } from "./styled";
 
 const Form = () => {
   const [exchangeAmount, setExchangeAmount] = useState("");
@@ -38,9 +38,7 @@ const Form = () => {
       onSubmit={onFormSubmit}
       onReset={onFormReset}
     >
-      <fieldset
-        className="form__fieldset"
-      >
+      <Fieldset>
         <Legend />
         <Clock />
         <Input
@@ -57,7 +55,7 @@ const Form = () => {
         />
         <Buttons />
         <Info />
-      </fieldset>
+      </Fieldset>
     </form>
   );
 };
