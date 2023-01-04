@@ -1,11 +1,9 @@
-import "./style.css"
+import { TopHeader } from "./styled";
 
 const Header = ({title}) => (
-    <header
-        className="header"
-    >
+    <TopHeader>
         {title}
-    </header>
+    </TopHeader>
 );
 
 export default Header;
