@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { currencies } from "../../Common/currencies";
+import { currencies } from "./Common/currencies";
 import Info from "./Info";
 import Buttons from "./Buttons";
 import Result from "./Result";
 import Select from "./Select";
 import Input from "./Input";
 import Legend from "./Legend";
-import Clock from "../../Clock";
+import Clock from "./Clock";
 import { Fieldset } from "./styled";
 
 const Form = () => {
