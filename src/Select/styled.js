@@ -1,22 +1,20 @@
-.select__label {
+import styled from "styled-components";
+
+export const Label = styled.label`
     font-weight: 700;
     margin: 5px;
     padding: 5px;
-}
 
-@media (max-width: 767px) {
-    .select__label {
+    @media (max-width: 767px) {
         display: grid;
         grid-template-columns: min-content ;
     }
-}
+`;
 
-.select__currencyValue {
+export const Options = styled.select`
     margin: 5px 5px;
-}
 
-@media (max-width: 767px) {
-    .select__currencyValue {
+    @media (max-width: 767px) {
         margin: 5px 0px;
     }
-}
+`;
