@@ -6,7 +6,7 @@ import Result from "./Result";
 import Select from "./Select";
 import Input from "./Input";
 import Legend from "./Legend";
-import Clock from "./Clock";
+import { Clock } from "./Clock";
 import { Fieldset } from "./styled";
 
 const Form = () => {
