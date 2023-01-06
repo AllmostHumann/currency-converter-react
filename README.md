@@ -24,7 +24,7 @@ Simple to do list in React.js, with mobile devices responsiveness.
 - ES6
 - Grid
 - React.js
-- CSS
+- Styled-components
 
 
 
