@@ -10,7 +10,7 @@ function App() {
       <GlobalStyle />
       <Header>Czinkciarz.peel</Header>
       <Form />
-      <Footer />
+      <Footer>Copyright 2022 Wszelkie prawa zastrzeżone.</Footer>
     </>
   );
 }

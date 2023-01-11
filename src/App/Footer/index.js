@@ -1,7 +1,10 @@
-import { Copyright } from "./styled";
+import styled from "styled-components";
 
-const Footer = () => (
-    <Copyright> Copyright 2022 Wszelkie prawa zastrzeżone. </Copyright>
-);
+const Footer = styled.footer`
+ text-align: center;
+ margin: 10px 15px;
+ font-weight: 700;
+ color: rgb(255, 165, 0)
+`;
 
 export default Footer;
