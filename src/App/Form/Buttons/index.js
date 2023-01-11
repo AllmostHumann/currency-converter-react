@@ -1,8 +1,6 @@
-import React from "react";
 import { Button } from "./styled";
 
 const Buttons = () => (
-  <>
     <div>
       <Button
         type="submit"
@@ -15,7 +13,6 @@ const Buttons = () => (
         Reset
       </Button>
     </div>
-  </>
 )
 
 export default Buttons;
