@@ -8,8 +8,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header
-        title="Czinkciarz.peel" />
+      <Header />
       <Form />
       <Footer />
     </>
