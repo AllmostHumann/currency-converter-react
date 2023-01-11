@@ -1,7 +1,6 @@
 import { Label, InputField } from "./styled";
 
 const Input = ({ exchangeAmount, setExchangeAmount }) => (
-
   <section>
     <Label>
       Wpisz kwotę w PLN:
