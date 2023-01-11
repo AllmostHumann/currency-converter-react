@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Header = styled.header`
+const Header = styled.header`
     font-weight: 700;
     font-family: 'lato', sans-serif;
     font-size: 50px;
@@ -11,7 +11,5 @@ export const Header = styled.header`
         font-size: 40px;
     }
 `;
-
-<Header>Czinkciarz.peel</Header>
 
 export default Header;
