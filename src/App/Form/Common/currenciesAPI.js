@@ -6,7 +6,6 @@ export const useRatesData = () => {
         status: "wczytywanie",
     });
 
-
 useEffect(() => {
     const getRates = async () => {
         try {
