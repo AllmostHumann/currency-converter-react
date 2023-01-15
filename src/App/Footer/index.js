@@ -4,7 +4,7 @@ const Footer = styled.footer`
   text-align: center;
   margin: 10px 15px;
   font-weight: 700;
-  color: rgb(255, 165, 0)
+  color: hsl(39, 100%, 50%)
 `;
 
 export default Footer;

@@ -14,7 +14,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
-  background-color: rgb(238, 238, 238);
+  background-color: hsl(0, 0%, 93%);
   background-image: url("${background}")
 }
 `;
