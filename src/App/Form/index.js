@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Clock } from "./Clock";
-import { Fieldset, ErrorText, LoadingText, Loading, Spinner  } from "./styled";
+import { Fieldset, ErrorText, LoadingText, Loading, Spinner } from "./styled";
 import { useRatesData } from "./useRatesData";
 import Info from "./Info";
 import Buttons from "./Buttons";
@@ -15,6 +15,7 @@ const Form = () => {
   const [result, getResult] = useState("");
   const ratesData = useRatesData();
   const { date, rates, status } = ratesData;
+  const inputRef = useRef(null);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -23,14 +24,15 @@ const Form = () => {
 
   const onFormReset = () => {
     setExchangeAmount("");
-    getResult("");
+    getResult("");  
   };
 
   const calculatedResult = (exchangeAmount, currency) => {
     const exchangeRate = rates[currency];
 
-    getResult((exchangeAmount / exchangeRate).toFixed(2) + " " + currency);
-
+    getResult((
+      exchangeAmount / exchangeRate).toFixed(2) + " " + currency
+    );
   };
 
   return (
@@ -50,7 +52,7 @@ const Form = () => {
             Trwa ładowanie danych z Europejskiego Banku Centralnego...
           </LoadingText>
           <Loading>
-            <Spinner/>
+            <Spinner />
           </Loading>
         </>
       ) : (
@@ -60,6 +62,7 @@ const Form = () => {
           <Input
             exchangeAmount={exchangeAmount}
             setExchangeAmount={setExchangeAmount}
+            ref={inputRef}
           />
           <Select
             currencyExchange={currencyExchange}
@@ -69,7 +72,7 @@ const Form = () => {
           <Result
             result={result}
           />
-          <Buttons />
+          <Buttons/>
           <Info
             date={date}
           />
