@@ -10,7 +10,7 @@ const Select = ({ rates, currencyExchange, setCurrencyExchange }) => (
         value={currencyExchange}
         onChange={({ target }) => setCurrencyExchange(target.value)}
       >
-        {Object.keys({rates}).map(currency => (
+        {Object.keys(rates).map(currency => (
           <option
             key={currency}
             value={currency}
