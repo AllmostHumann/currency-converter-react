@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Clock } from "./Clock";
-import { Fieldset } from "./styled";
+import { Fieldset, ErrorText, LoadingText, Loading, Spinner  } from "./styled";
 import { useRatesData } from "./useRatesData";
 import Info from "./Info";
 import Buttons from "./Buttons";
@@ -29,7 +29,7 @@ const Form = () => {
   const calculatedResult = (exchangeAmount, currency) => {
     const exchangeRate = rates[currency];
 
-    getResult((exchangeAmount / exchangeRate).toFixed(2) + " ");
+    getResult((exchangeAmount / exchangeRate).toFixed(2) + " " + currency);
 
   };
 
@@ -38,28 +38,43 @@ const Form = () => {
     <form
       onSubmit={onFormSubmit}
       onReset={onFormReset}
-      status={status}
     >
-      <Fieldset>
-        <Legend />
-        <Clock />
-        <Input
-          exchangeAmount={exchangeAmount}
-          setExchangeAmount={setExchangeAmount}
-        />
-        <Select
-          currencyExchange={currencyExchange}
-          setCurrencyExchange={setCurrencyExchange}
-          rates={rates}
-        />
-        <Result
-          result={result}
-        />
-        <Buttons />
-        <Info 
-        date={date}
-        />
-      </Fieldset>
+      {status === "error" ? (
+        <ErrorText>
+          Coś się popsuło!<br />
+          Sprawdz połączenie z internetem, a następnie spróbuj odświeżyć stronę.
+        </ErrorText>
+      ) : status !== "succes" ? (
+        <>
+          <LoadingText>
+            Trwa ładowanie danych z Europejskiego Banku Centralnego...
+          </LoadingText>
+          <Loading>
+            <Spinner/>
+          </Loading>
+        </>
+      ) : (
+        <Fieldset>
+          <Legend />
+          <Clock />
+          <Input
+            exchangeAmount={exchangeAmount}
+            setExchangeAmount={setExchangeAmount}
+          />
+          <Select
+            currencyExchange={currencyExchange}
+            setCurrencyExchange={setCurrencyExchange}
+            rates={rates}
+          />
+          <Result
+            result={result}
+          />
+          <Buttons />
+          <Info
+            date={date}
+          />
+        </Fieldset>
+      )}
     </form>
   );
 };
