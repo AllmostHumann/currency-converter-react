@@ -6,7 +6,6 @@ const Input = ({ exchangeAmount, setExchangeAmount, inputRef }) => (
       Wpisz kwotę w PLN:
       <InputField
         type="number"
-        required
         step="0.01"
         min="0.01"
         placeholder="Pole wymagane"
