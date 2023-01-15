@@ -27,6 +27,10 @@ const Form = () => {
     getResult("");  
   };
 
+  const focusInput = () => {
+    inputRef.current.focus();
+};
+
   const calculatedResult = (exchangeAmount, currency) => {
     const exchangeRate = rates[currency];
 
@@ -72,7 +76,9 @@ const Form = () => {
           <Result
             result={result}
           />
-          <Buttons/>
+          <Buttons
+          onClick={focusInput}
+          />
           <Info
             date={date}
           />
