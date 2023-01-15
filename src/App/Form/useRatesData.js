@@ -18,7 +18,7 @@ useEffect(() => {
             });
         } catch (error) {
             setRatesData({
-                status: "Coś się popsuło",
+                status: "error",
             });
         }
     };
