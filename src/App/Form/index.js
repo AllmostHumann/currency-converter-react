@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { currencies } from "./Common/currencies";
 import { Clock } from "./Clock";
 import { Fieldset } from "./styled";
-import { useRatesData } from "./Common/currenciesAPI";
+import { useRatesData } from "./useRatesData";
 import Info from "./Info";
 import Buttons from "./Buttons";
 import Result from "./Result";
@@ -12,12 +11,14 @@ import Legend from "./Legend";
 
 const Form = () => {
   const [exchangeAmount, setExchangeAmount] = useState("");
-  const [currency, setCurrency] = useState("EUR");
-  const [result, getResult] = useState("N/A");
+  const [currencyExchange, setCurrencyExchange] = useState("EUR");
+  const [result, getResult] = useState("");
+  const ratesData = useRatesData();
+  const { date, rates, status } = ratesData;
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    calculatedResult(exchangeAmount, currency);
+    calculatedResult(exchangeAmount, currencyExchange);
   };
 
   const onFormReset = () => {
@@ -26,10 +27,9 @@ const Form = () => {
   };
 
   const calculatedResult = (exchangeAmount, currency) => {
-    const {rate: exchangeRate} = currencies.find(({ short }) => short === currency);
-    const {short} = currencies.find(({ short }) => short === currency);
-    
-    getResult((exchangeAmount / exchangeRate).toFixed(2) + " " + short);
+    const exchangeRate = rates[currency];
+
+    getResult((exchangeAmount / exchangeRate).toFixed(2) + " ");
 
   };
 
@@ -38,6 +38,7 @@ const Form = () => {
     <form
       onSubmit={onFormSubmit}
       onReset={onFormReset}
+      status={status}
     >
       <Fieldset>
         <Legend />
@@ -47,15 +48,17 @@ const Form = () => {
           setExchangeAmount={setExchangeAmount}
         />
         <Select
-          currency={currency}
-          setCurrency={setCurrency}
-          currencies={currencies}
+          currencyExchange={currencyExchange}
+          setCurrencyExchange={setCurrencyExchange}
+          rates={rates}
         />
         <Result
           result={result}
         />
         <Buttons />
-        <Info />
+        <Info 
+        date={date}
+        />
       </Fieldset>
     </form>
   );

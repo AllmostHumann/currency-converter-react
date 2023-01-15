@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 export const useRatesData = () => {
     const [ratesData, setRatesData] = useState({
@@ -9,7 +9,8 @@ export const useRatesData = () => {
 useEffect(() => {
     const getRates = async () => {
         try {
-            const response = await axios.get("https://api.exchangerate.host/latest?=basePLN");
+            const currenciesURL = "https://api.exchangerate.host/latest?base=PLN";
+            const response = await axios.get(currenciesURL);
             setRatesData({
                 date: response.data.date,
                 rates: response.data.rates,
@@ -21,8 +22,8 @@ useEffect(() => {
             });
         }
     };
-    setTimeout(getRates, 3000);
-},[]);
+    setTimeout(getRates, 1000);
+}, []);
 
 return ratesData;
 };

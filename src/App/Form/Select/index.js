@@ -1,16 +1,16 @@
 import { Label, Options } from "./styled"
 
 
-const Select = ({ currency, setCurrency, rates }) => (
+const Select = ({ rates, currencyExchange, setCurrencyExchange }) => (
   <section>
     <Label>
       Wybierz walutę:
       <Options
         name="currency"
-        value={currency}
-        onChange={({ target }) => setCurrency(target.value)}
+        value={currencyExchange}
+        onChange={({ target }) => setCurrencyExchange(target.value)}
       >
-        {Object.keys(rates).map(currency => (
+        {Object.keys({rates}).map(currency => (
           <option
             key={currency}
             value={currency}
