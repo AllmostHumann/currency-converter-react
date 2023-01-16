@@ -45,7 +45,7 @@ const Form = () => {
     >
       {status === "error" ? (
         <ErrorText>
-          Coś się popsuło!<br />
+          Dzwońcie po Proboszcza! Coś się popsuło!<br />
           Sprawdz połączenie z internetem, a następnie spróbuj odświeżyć stronę.
         </ErrorText>
       ) : status !== "succes" ? (
