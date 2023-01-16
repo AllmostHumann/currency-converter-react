@@ -1,15 +1,14 @@
-import { SectionLabel, SectionResult, SectionValue } from "./styled";
+import { SectionLabel, SectionResult } from "./styled";
 
 const Result = ({ result }) => (
   <SectionLabel>
     <SectionResult>
+      Otrzymasz:
       {result !== undefined && (
         <>
-          Otrzymasz: {result.sourceAmount}&nbsp;PLN&nbsp; =
+          &nbsp;{result.sourceAmount?.toFixed(2)}&nbsp;PLN&nbsp;=
           {" "}
-          <SectionValue>
-            {result.targetAmount?.toFixed(2)}&nbsp;{result.currency}
-          </SectionValue>
+          {result.targetAmount?.toFixed(2)}&nbsp;{result.currency}
         </>
       )}
     </SectionResult>

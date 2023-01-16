@@ -12,7 +12,7 @@ import Legend from "./Legend";
 const Form = () => {
   const [exchangeAmount, setExchangeAmount] = useState("");
   const [currencyExchange, setCurrencyExchange] = useState("EUR");
-  const [result, getResult] = useState("");
+  const [result, getResult] = useState();
   const ratesData = useRatesData();
   const { date, rates, status } = ratesData;
 
@@ -32,8 +32,9 @@ const Form = () => {
 
     getResult({
       sourceAmount: +exchangeAmount,
-      targetAmount: exchangeAmount * exchangeRate, currency,
-    })
+      targetAmount: exchangeAmount * exchangeRate,
+      currency,
+    });
   };
 
   return (

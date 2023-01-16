@@ -12,11 +12,3 @@ export const SectionLabel = styled.label`
         grid-template-columns: 1fr ;
     }
 `;
-
-export const SectionValue = styled.strong`
-    margin: 5px 10px;
-
-    @media (max-width: 767px) {
-        margin: 5px 0px;
-    }
-`;
