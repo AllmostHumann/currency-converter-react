@@ -9,7 +9,7 @@ const Input = ({ exchangeAmount, setExchangeAmount, inputRef }) => (
         step="0.01"
         min="0.01"
         placeholder="Pole wymagane"
-        ref={inputRef}
+        required
         value={exchangeAmount}
         onChange={({ target }) => setExchangeAmount(target.value)}
       />

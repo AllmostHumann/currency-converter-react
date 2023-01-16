@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Clock } from "./Clock";
 import { Fieldset, ErrorText, LoadingText, Loading, Spinner } from "./styled";
 import { useRatesData } from "./useRatesData";
@@ -15,7 +15,6 @@ const Form = () => {
   const [result, getResult] = useState("");
   const ratesData = useRatesData();
   const { date, rates, status } = ratesData;
-  const inputRef = useRef(null);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -24,12 +23,8 @@ const Form = () => {
 
   const onFormReset = () => {
     setExchangeAmount("");
-    getResult("");  
+    getResult("");
   };
-
-  const focusInput = () => {
-    inputRef.current.focus();
-};
 
   const calculatedResult = (exchangeAmount, currency) => {
     const exchangeRate = rates[currency];
@@ -66,7 +61,6 @@ const Form = () => {
           <Input
             exchangeAmount={exchangeAmount}
             setExchangeAmount={setExchangeAmount}
-            ref={inputRef}
           />
           <Select
             currencyExchange={currencyExchange}
@@ -76,9 +70,7 @@ const Form = () => {
           <Result
             result={result}
           />
-          <Buttons
-          onClick={focusInput}
-          />
+          <Buttons />
           <Info
             date={date}
           />
@@ -87,6 +79,5 @@ const Form = () => {
     </form>
   );
 };
-
 
 export default Form;

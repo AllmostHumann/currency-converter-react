@@ -1,10 +1,9 @@
 import { Button } from "./styled";
 
-const Buttons = ({ focusInput }) => (
+const Buttons = () => (
   <div>
     <Button
       type="submit"
-      onClick={focusInput}
     >
       Przelicz
     </Button>
