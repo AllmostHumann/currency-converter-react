@@ -24,7 +24,7 @@ const Form = () => {
   const onFormReset = (event) => {
     event.preventDefault();
     setExchangeAmount("");
-    getResult("");
+    getResult();
   };
 
   const calculatedResult = (exchangeAmount, currency) => {
