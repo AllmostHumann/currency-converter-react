@@ -21,7 +21,8 @@ const Form = () => {
     calculatedResult(exchangeAmount, currencyExchange);
   };
 
-  const onFormReset = () => {
+  const onFormReset = (event) => {
+    event.preventDefault();
     setExchangeAmount("");
     getResult("");
   };
@@ -29,9 +30,10 @@ const Form = () => {
   const calculatedResult = (exchangeAmount, currency) => {
     const exchangeRate = rates[currency];
 
-    getResult((
-      exchangeAmount / exchangeRate).toFixed(2) + " " + currency
-    );
+    getResult({
+      sourceAmount: +exchangeAmount,
+      targetAmount: exchangeAmount * exchangeRate, currency,
+    })
   };
 
   return (
