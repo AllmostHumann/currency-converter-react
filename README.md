@@ -1,4 +1,4 @@
-# Jakub Głuch - Currency conventer in React.js
+# Jakub Głuch - Currency converter in React.js
 
 ![To do list Demo](src/gif/currencyDemo.gif)
 
@@ -7,7 +7,7 @@
 
 ## Introduction
 
-This is my fifth project made with <b>#YouCode course.</b> This time the "Currency conventer" project is transferred in to React.js. 
+This is my fifth project made with <b>#YouCode course.</b> This time the "Currency converter" project is transferred in to React.js. The currency converter at every page reload is downloading fresh and updated currencies values from European Central Bank.
 
 Please follow me and see how I become Frontend dev! 
 
@@ -25,6 +25,7 @@ Simple to do list in React.js, with mobile devices responsiveness.
 - Grid
 - React.js
 - Styled-components
+- Axios for API calls
 
 
 
