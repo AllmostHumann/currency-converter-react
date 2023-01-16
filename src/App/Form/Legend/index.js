@@ -2,7 +2,7 @@ import { Caption } from "./styled";
 
 const Legend = () => (
   <Caption>
-    Currency conventer
+    Currency converter
   </Caption>
 );
 
