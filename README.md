@@ -3,7 +3,7 @@
 ![To do list Demo](src/gif/currencyDemo.gif)
 
 
-## Demo https://allmosthumann.github.io/currency-conventer-react/
+## Demo https://allmosthumann.github.io/currency-converter-react/
 
 ## Introduction
 
