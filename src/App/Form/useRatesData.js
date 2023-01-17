@@ -14,7 +14,7 @@ useEffect(() => {
             setRatesData({
                 date: response.data.date,
                 rates: response.data.rates,
-                status: "succes",
+                status: "success",
             });
         } catch (error) {
             setRatesData({
