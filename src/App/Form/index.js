@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Clock } from "./Clock";
 import { Fieldset, ErrorText, LoadingText, Loading, Spinner } from "./styled";
-import { useRatesData } from "./useRatesData";
+import { useRatesData, } from "./useRatesData";
 import Info from "./Info";
 import Buttons from "./Buttons";
 import Result from "./Result";
@@ -13,8 +13,8 @@ const Form = () => {
   const [exchangeAmount, setExchangeAmount] = useState("");
   const [currencyExchange, setCurrencyExchange] = useState("EUR");
   const [result, getResult] = useState();
-  const ratesData = useRatesData();
-  const { date, rates, status } = ratesData;
+  const { loadingStatus, ratesData } = useRatesData();
+  const { date, rates } = ratesData;
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -37,18 +37,17 @@ const Form = () => {
     });
   };
 
-  return (
+  switch (loadingStatus) {
 
-    <form
-      onSubmit={onFormSubmit}
-      onReset={onFormReset}
-    >
-      {status === "error" ? (
+    case "error":
+      return (
         <ErrorText>
           Dzwońcie po Proboszcza! Coś się popsuło!<br />
           Sprawdz połączenie z internetem, a następnie spróbuj odświeżyć stronę.
         </ErrorText>
-      ) : status !== "success" ? (
+      );
+    case "loading":
+      return (
         <>
           <LoadingText>
             Trwa ładowanie danych z Europejskiego Banku Centralnego...
@@ -57,30 +56,37 @@ const Form = () => {
             <Spinner />
           </Loading>
         </>
-      ) : (
-        <Fieldset>
-          <Legend />
-          <Clock />
-          <Input
-            exchangeAmount={exchangeAmount}
-            setExchangeAmount={setExchangeAmount}
-          />
-          <Select
-            currencyExchange={currencyExchange}
-            setCurrencyExchange={setCurrencyExchange}
-            rates={rates}
-          />
-          <Result
-            result={result}
-          />
-          <Buttons />
-          <Info
-            date={date}
-          />
-        </Fieldset>
-      )}
-    </form>
-  );
-};
-
-export default Form;
+      );
+    case "success":
+      return (
+        <form
+          onSubmit={onFormSubmit}
+          onReset={onFormReset}
+        >
+          <Fieldset>
+            <Legend />
+            <Clock />
+            <Input
+              exchangeAmount={exchangeAmount}
+              setExchangeAmount={setExchangeAmount}
+            />
+            <Select
+              currencyExchange={currencyExchange}
+              setCurrencyExchange={setCurrencyExchange}
+              rates={rates}
+            />
+            <Result
+              result={result}
+            />
+            <Buttons />
+            <Info
+              date={date}
+            />
+          </Fieldset>
+        </form >
+      );
+      default:
+        return;
+  };
+}
+  export default Form;
