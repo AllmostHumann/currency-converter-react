@@ -8,6 +8,7 @@ import Result from "./Result";
 import Select from "./Select";
 import Input from "./Input";
 import Legend from "./Legend";
+import moment from "moment/moment";
 
 const Form = () => {
   const [exchangeAmount, setExchangeAmount] = useState("");
@@ -80,7 +81,7 @@ const Form = () => {
             />
             <Buttons />
             <Info
-              date={date}
+              date={moment(date).format('DD.MM.YYYY')}
             />
           </Fieldset>
         </form >

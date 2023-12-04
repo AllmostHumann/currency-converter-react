@@ -9,10 +9,10 @@ export const useRatesData = () => {
     useEffect(() => {
         const getRates = async () => {
             try {
-                const currenciesURL = "https://api.exchangerate.host/latest?base=PLN";
+                const currenciesURL = "https://open.er-api.com/v6/latest/PLN";
                 const response = await axios.get(currenciesURL);
                 setRatesData({
-                    date: response.data.date,
+                    date: response.data.time_last_update_utc,
                     rates: response.data.rates,
                     status: "success",
                 });
@@ -25,6 +25,7 @@ export const useRatesData = () => {
         setTimeout(getRates, 1500);
     }, []);
 
+    
     const loadingStatus = ratesData.status;
 
     return { ratesData, loadingStatus };
